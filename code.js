@@ -63,7 +63,8 @@ typedef NS_ENUM(NSInteger, SRReadyState) {
 
   function textFieldBinding(tfID, defaultValue) {
     let selector = '#' + tfID;
-    let strFromCookie = $.cookie(tfID);
+    let strFromCookie = $.cookie(tfID) || '';
+    strFromCookie = strFromCookie.trim();
     if ((strFromCookie === undefined || strFromCookie.length === 0) && defaultValue) {
       $.cookie(tfID, defaultValue);
     }
