@@ -1,6 +1,6 @@
 $(function () {
   console.log('loaded');
-  const enumTestCase = `
+  const enumTestCase = `//Input your NS_ENUM here
 typedef NS_ENUM(NSInteger, SRReadyState) {
   SR_CONNECTING   = 0,
   SR_OPEN         = 1,
